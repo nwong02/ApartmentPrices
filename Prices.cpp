@@ -30,8 +30,8 @@ int main()
 
 	for (int i = 0; i <= numberOfFloors; i++)
 	{
-		totalCost = basePrice + (i * (double)numberOfFloors * taxRate);
-		cout << "Total cost is: \n" << totalCost << endl;
+		totalCost = (amenitiesCharge * (double)i + taxRate * (double)i ) * basePrice + basePrice;
+		cout << "Total cost of an apartment on floor: " << i << " is: \n" << totalCost << endl;
 	}
 
 	return 0;
