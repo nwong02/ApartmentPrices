@@ -10,7 +10,29 @@
 
 using namespace std;
 
-int main(void)
+int main()
 {
+	int numberOfFloors, basePrice = 0;
+	double amenitiesCharge, taxRate = 0.0;
+	double totalCost = 0.0;
+
+	cout << "How many floors are there? \n";
+	cin >> numberOfFloors;
+
+	cout << "What's the base price of the apartment? \n";
+	cin >> basePrice;
+
+	cout << "What's the amenities charge? \n";
+	cin >> amenitiesCharge;
+
+	cout << "What's the tax rate? \n";
+	cin >> taxRate;
+
+	for (int i = 0; i <= numberOfFloors; i++)
+	{
+		totalCost = basePrice + (i * (double)numberOfFloors * taxRate);
+		cout << "Total cost is: \n" << totalCost << endl;
+	}
+
 	return 0;
 }
