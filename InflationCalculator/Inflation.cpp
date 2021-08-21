@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 /*
 * Project		: Flow Control
@@ -12,15 +15,22 @@ double inflation(double rate);
 double inflation(double rate)
 {
 	rate = rate / 100;
-	printf("Inflation rate is: %f", rate);
+	printf("Inflation rate is: %f\n", rate);
 	return rate;
 }
 
 
-
-double costOfItem(double cost);
-
-double costOfItem(double cost)
+int main(void)
 {
+	int years = 5;
+	double costOfItem = 51.99;
+	double rate = inflation(5.6);
 
+	for (int i = 1; i <= years; i++)
+	{
+		costOfItem = costOfItem + costOfItem * rate;
+		printf("Inflation adjusted price for year %d is: %f\n", i, costOfItem);
+	}
+	
+	return 0;
 }
